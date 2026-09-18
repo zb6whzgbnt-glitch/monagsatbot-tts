@@ -1,0 +1,15 @@
+.venv
+.env
+.git
+.gitignore
+**/__pycache__
+*.pyc
+*.bak
+*.broken
+data/bot.log
+data/bot.log.*
+data/bot.pid
+data/*.mp3
+data/*.ogg
+README.md
+scripts

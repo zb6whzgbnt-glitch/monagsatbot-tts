@@ -1,0 +1,25 @@
+# Render Blueprint — free Web Service, Telegram webhook mode.
+# Dashboard: New → Blueprint → connect this repo, or create Web Service manually.
+services:
+  - type: web
+    name: telegram-tts-bot
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: FISH_API_KEY
+        sync: false
+      - key: COHERE_API_KEY
+        sync: false
+      - key: COHERE_MODEL
+        sync: false
+      - key: ALLOWED_USER_IDS
+        sync: false
+      - key: WEBHOOK_SECRET
+        generateValue: true
+      - key: WEBHOOK_PATH
+        value: telegram
